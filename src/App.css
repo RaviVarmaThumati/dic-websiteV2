@@ -1,0 +1,114 @@
+/* --- Global Layout Reset --- */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* --- Theme Variables --- */
+:root {
+  --background-color: #fafafa;
+  --text-color: #1f2937;
+  --accent-color: #6366f1;
+  --accent-hover: #4f46e5;
+  --card-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #0f172a;
+    --text-color: #e2e8f0;
+    --card-bg: #1e293b;
+    --shadow-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* --- Main Root Container --- */
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* --- Page Content --- */
+main {
+  width: 100%;
+  max-width: 1280px;
+  padding: 2rem;
+  text-align: left;
+}
+
+/* --- Logo Styling --- */
+.logo {
+  height: 5rem;
+  margin: 1rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 1.5em var(--accent-color));
+}
+
+/* --- Card Component (Generic) --- */
+.card {
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 10px var(--shadow-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px var(--shadow-color);
+}
+
+/* --- Reusable Button Style --- */
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* --- Info Text (like read-the-docs) --- */
+.read-the-docs {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .read-the-docs {
+    color: #9ca3af;
+  }
+}
+
+/* --- Utility Animations --- */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+main, .card {
+  animation: fade-in 0.4s ease-in-out;
+}

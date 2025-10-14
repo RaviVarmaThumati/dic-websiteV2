@@ -1,0 +1,102 @@
+.compliances-section {
+  width: 100%;
+  padding: 80px 0;
+  background: linear-gradient(180deg, #f9fafc 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e1e2f;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+}
+
+.cert-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cert-box:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.25);
+}
+
+.cert-logo {
+  width: 120px;
+  height: auto;
+  filter: brightness(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cert-box:hover .cert-logo {
+  transform: scale(1.08);
+  filter: brightness(1.2);
+}
+
+/* 🔹 Gradient Overlays for Left & Right Edges */
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.gradient-overlay.left {
+  left: 0;
+  background: linear-gradient(to right, rgba(249, 250, 252, 1), rgba(249, 250, 252, 0));
+}
+
+.gradient-overlay.right {
+  right: 0;
+  background: linear-gradient(to left, rgba(249, 250, 252, 1), rgba(249, 250, 252, 0));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cert-box {
+    padding: 20px;
+    min-width: 160px;
+  }
+
+  .gradient-overlay {
+    width: 60px;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+}

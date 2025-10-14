@@ -1,0 +1,314 @@
+
+/* ==== Offerings Section ==== */
+.offerings-section {
+  padding: 2rem 5rem;
+  background: #ffffff; /* ✅ entire section white */
+  position: relative;
+  overflow: hidden;
+}
+
+/* soft blurred background wave effect */
+.offerings-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at center, rgba(79, 70, 229, 0.25), transparent 70%);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+/* Container */
+.offerings-container {
+  display: flex;
+  gap: 2.5rem;
+  width:100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  background: #ffffff; /* ✅ entire section white */
+}
+
+/* Sidebar */
+.offerings-sidebar {
+  flex: 1;
+  min-width: 240px;
+}
+
+.offerings-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #111827;
+}
+
+.heading-highlight {
+  width: 6px;
+  height: 28px;
+  background: linear-gradient(180deg, #4f46e5, #6366f1);
+  border-radius: 3px;
+  margin-right: 0.6rem;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+}
+
+/* Tabs */
+.offerings-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offerings-tabs li {
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #374151;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(229, 231, 235, 0.7);
+  transition: all 0.3s ease;
+}
+
+.offerings-tabs li:hover {
+  background: linear-gradient(90deg, #eef2ff 0%, #e0e7ff 100%);
+  transform: translateX(5px);
+  color: #111827;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.1);
+}
+
+.offerings-tabs li.active {
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 3px 12px rgba(79, 70, 229, 0.25);
+  transform: translateX(8px);
+}
+
+/* Details Panel */
+.offerings-details {
+  flex: 3;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.offerings-details h2 {
+  font-size: 1.75rem;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.offerings-details p {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Links inside details */
+.offerings-links {
+  display: flex;
+  gap: 2.5rem;
+  margin: 1.5rem 0;
+}
+
+.offerings-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offerings-links li {
+  margin-bottom: 0.7rem;
+}
+
+.offerings-links a {
+  text-decoration: none;
+  color: #4f46e5;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.offerings-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #4f46e5;
+  transition: width 0.3s ease;
+}
+
+.offerings-links a:hover::after {
+  width: 100%;
+}
+
+.details-link {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.details-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+  padding: 0.9rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.details-link a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: all 0.7s ease;
+}
+
+.details-link a:hover::before {
+  left: 130%;
+}
+
+.details-link a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(99, 102, 241, 0.35);
+}
+
+.details-link a .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.details-link a:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .offerings-container {
+    flex-direction: column;
+  }
+
+  .offerings-sidebar {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .offerings-tabs {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .offerings-tabs li {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .offerings-details {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .offerings-section {
+    padding: 3rem 1rem;
+  }
+
+  .offerings-details h2 {
+    font-size: 1.4rem;
+  }
+
+  .offerings-links {
+    flex-direction: column;
+  }
+}
+
+
+
+.offerings-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.highlight-card {
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+  cursor: default;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.15);
+  background: linear-gradient(145deg, #eef2ff, #f9fafb);
+  border-color: #c7d2fe;
+}
+
+.highlight-icon {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(79, 70, 229, 0.3);
+}
+
+.highlight-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Subtle entry animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.highlight-card {
+  animation: fadeInUp 0.5s ease forwards;
+}
