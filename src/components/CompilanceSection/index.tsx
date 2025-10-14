@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import "./Compilance.css";
 
 const certifications = [
-  { src: "src/assets/certifications/ISO1.png", alt: "ISO 1" },
-  { src: "src/assets/certifications/ISO2.png", alt: "ISO 2" },
-  { src: "src/assets/certifications/ISO3.png", alt: "ISO 3" },
-  { src: "src/assets/certifications/ISO4.png", alt: "ISO 4" },
-  { src: "src/assets/certifications/ISO5.png", alt: "ISO 5" },
+  { src: "/ISO1.png", alt: "ISO 1" },
+  { src: "/ISO2.png", alt: "ISO 2" },
+  { src: "/ISO3.png", alt: "ISO 3" },
+  { src: "/ISO4.png", alt: "ISO 4" },
+  { src: "/ISO5.png", alt: "ISO 5" },
 ];
 
 const CompilanceSection: React.FC = () => {

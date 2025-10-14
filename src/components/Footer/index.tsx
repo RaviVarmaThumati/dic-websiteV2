@@ -26,7 +26,7 @@ const FooterSection: React.FC = () => (
         <div className="footer-col footer-left">
           <div className="footer-logo-wrap">
             <img
-              src="../src/assets/D_logo_header1.png"
+              src="/d-logo.png"
               alt="DIC"
               className="footer-logo"
             />

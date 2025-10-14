@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import logo from "../../assets/d-logo.png";
+import logo from "/d-logo.png";
 import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
@@ -81,8 +81,6 @@ const Header: React.FC = () => {
             <li><a href="#industries">Industries</a></li>
             <li><a href="#solutions">Solutions</a></li>
             <li><a href="#technologies">Technologies</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#pricing">Pricing</a></li>
           </ul>
         </nav>
 

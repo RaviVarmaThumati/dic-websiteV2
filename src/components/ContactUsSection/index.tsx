@@ -17,11 +17,6 @@ const ContactUsSection: React.FC = () => (
           <h2 className="consult-title">
             Need a <span>Consultation?</span>
           </h2>
-          <img
-            src="/godaddy-verified.png"
-            className="godaddy-badge"
-            alt="GoDaddy Verified"
-          />
         </div>
 
         <p className="consult-desc">

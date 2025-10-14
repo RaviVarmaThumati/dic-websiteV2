@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import "./App.css";
 import KeyFactsSection from "./components/KeyFactsSection";
@@ -8,15 +8,14 @@ import FooterSection from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 import CompilanceSection from "./components/CompilanceSection";
 import ContactUsSection from "./components/ContactUsSection";
-import ContactPage from "./Pages/ContactPage"; // Make sure this exists
 import WhyChooseUsSection from "./components/WhyChooseUsSection";
+import ContactPage from "./Pages/ContactPage"; // Make sure this exists
 import AboutUsPage from "./Pages/AboutUsPage";
 import ServicesPage from "./Pages/ServicesPage";
 
 function App() {
   return (
-    <Router>
-      <Routes>
+    <Routes>
         {/* Home Page */}
         <Route
           path="/"
@@ -49,7 +48,6 @@ function App() {
           element={<ServicesPage />}
         />
       </Routes>
-    </Router>
   );
 }
 

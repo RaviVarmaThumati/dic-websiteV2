@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import "./HeroSection.css";
 
 const slides = [
-  "src/assets/hero/hero-01.jpg",
-  "src/assets/hero/hero-02.jpg",
-  "src/assets/hero/hero-03.jpg",
-  "src/assets/hero/hero-04.jpg",
+  "/hero-01.jpg",
+  "/hero-02.jpg",
+  "/hero-03.jpg",
+  "/hero-04.jpg",
 ];
 
 const HeroSection: React.FC = () => {
