@@ -2,7 +2,7 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import "./WhyChooseUsSection.css";
-import whyImage from "../../assets/whychooseus.png";
+import whyImage from "/whychooseus.png";
 
 const reasons = [
   {
